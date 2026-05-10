@@ -1,0 +1,37 @@
+{
+    "layer": "bottom",
+    "position": "bottom",
+    "height": 6,
+    "spacing": 4,
+    "start_hidden": true,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "pulseaudio"],
+
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "on-click": "activate"
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p}"
+    },
+
+    "cpu": {
+        "format": "󰻠 {usage}%",
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "󰍛 {percentage}%",
+        "interval": 2
+    },
+
+    "pulseaudio": {
+        "format": "󰕾 {volume}%",
+        "format-muted": "󰖁 muted",
+        "on-click": "ghostty --title='Volume' --window-decoration=false -e pulsemixer",
+        "on-click-right": "pavucontrol"
+    },
+}
